@@ -48,3 +48,13 @@ img{
   width: 200px;
   max-height: 270px;
 }
+
+.menu{
+  display: flex;
+  list-style-type: none;
+  
+}
+.menu>li{
+  margin-left: 10px;
+
+}
