@@ -58,3 +58,37 @@ img{
   margin-left: 10px;
 
 }
+.cart-cont{
+  width: 100%;
+}
+.cartbox{
+  width: 100%;
+  border: 1px solid;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 10px 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title{
+  font-size: 25px;
+}
+
+.totalprice{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.info{
+  padding: 10px ;
+}
+
+.counting{
+  display: flex;
+}
+.counting>button{
+  width: 20px;
+  font-size: 20px;
+}

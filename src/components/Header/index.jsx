@@ -1,10 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AddContext } from "../../Costume Hook/add";
+import { NumContext } from "../../Costume Hook/number";
 
 
-function Header() {
+function Header({}) {
     const {value, setValue, list, setList}= useContext(AddContext)
+    const {count,adder} = useContext(NumContext)
+
     return (
         <header className="header">
             <div className="header-cont">
@@ -23,7 +26,7 @@ function Header() {
                 </nav>
                 <Link to="/cart">
                     <div className="cart_cont">
-                        <div className="number"> {list.length}</div>
+                        <div className="number"> {count}</div>
                         <ion-icon name="cart"></ion-icon>
                     </div>
                 </Link>

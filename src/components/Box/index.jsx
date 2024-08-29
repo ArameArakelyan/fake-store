@@ -1,10 +1,28 @@
 import React, { useContext, useState } from "react";
 import { AddContext } from "../../Costume Hook/add";
+import { NumContext } from "../../Costume Hook/number";
 
-function Box({item}) {
+function Box({item,}) {
     let {value, setValue, list, setList} = useContext(AddContext)
+    let {count, adder} = useContext(NumContext)
     function adding(e) {
-        setList([...list, item])
+        adder()
+        
+        let isThere =false
+        let x = 0
+        for (let i = 0; i < list.length; i++) {
+            if (list[i].id===item.id) {
+                isThere = true
+                x = i
+                break
+            }
+        }
+        if (isThere) {
+            list[x].count++
+        } else {
+            setList([...list, {...item, "count":1}])
+        }
+        
     }
     return(
         <div className="box">

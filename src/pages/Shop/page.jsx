@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import useFetch from "../../Costume Hook/useFetch";
 import Box from "../../components/Box";
 
@@ -11,7 +11,7 @@ function Shop() {
     if (Object.keys(data).length !== 0) {
         items = [...data]
     }
-    return (
+    return ( 
         <main>
             <div className="shop-cont">
                 {
