@@ -4,9 +4,9 @@ import { NumContext } from "../../Costume Hook/number";
 
 function Box({item,}) {
     let {value, setValue, list, setList} = useContext(AddContext)
-    let {count, adder} = useContext(NumContext)
+    let {count, increase} = useContext(NumContext)
     function adding(e) {
-        adder()
+        increase()
         
         let isThere =false
         let x = 0

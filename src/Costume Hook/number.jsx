@@ -4,12 +4,15 @@ const NumContext = createContext()
 
 function NumProvider(props) {
     let [count, setValue] = useState(0)
-    function adder() {
+    function increase() {
         setValue(count+=1)
+    }
+    function decrease() {
+        setValue(count-=1)
     }
     return(
         <div>
-            <NumContext.Provider value={{count,adder}}>
+            <NumContext.Provider value={{count,setValue, increase,decrease}}>
                 {props.children}
             </NumContext.Provider>
         </div>

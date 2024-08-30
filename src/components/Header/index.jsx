@@ -1,12 +1,12 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AddContext } from "../../Costume Hook/add";
+
 import { NumContext } from "../../Costume Hook/number";
 
 
 function Header({}) {
-    const {value, setValue, list, setList}= useContext(AddContext)
-    const {count,adder} = useContext(NumContext)
+    // const {value, setValue, list, setList}= useContext(AddContext)
+    const {count} = useContext(NumContext)
 
     return (
         <header className="header">
