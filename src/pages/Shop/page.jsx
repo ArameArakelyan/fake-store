@@ -3,8 +3,6 @@ import useFetch from "../../Costume Hook/useFetch";
 import Box from "../../components/Box";
 
 function Shop() {
-    
-
     const data = useFetch("https://fakestoreapi.com/products", "GET")
 
     let items = []

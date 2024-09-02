@@ -2,12 +2,12 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { NumContext } from "../../Costume Hook/number";
+import { useSelector } from "react-redux";
 
 
 function Header({}) {
     // const {value, setValue, list, setList}= useContext(AddContext)
     const {count} = useContext(NumContext)
-
     return (
         <header className="header">
             <div className="header-cont">

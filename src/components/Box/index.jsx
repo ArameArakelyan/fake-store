@@ -1,27 +1,35 @@
 import React, { useContext, useState } from "react";
 import { AddContext } from "../../Costume Hook/add";
 import { NumContext } from "../../Costume Hook/number";
+import { useDispatch, useSelector } from "react-redux";
 
 function Box({item,}) {
-    let {value, setValue, list, setList} = useContext(AddContext)
+    const dispatch = useDispatch()
+    // let {value, setValue, list, setList} = useContext(AddContext)
     let {count, increase} = useContext(NumContext)
+
+    
     function adding(e) {
         increase()
         
-        let isThere =false
-        let x = 0
-        for (let i = 0; i < list.length; i++) {
-            if (list[i].id===item.id) {
-                isThere = true
-                x = i
-                break
-            }
-        }
-        if (isThere) {
-            list[x].count++
-        } else {
-            setList([...list, {...item, "count":1}])
-        }
+        // let isThere =false
+        // let x = 0
+        // for (let i = 0; i < list.length; i++) {
+        //     if (list[i].id===item.id) {
+        //         isThere = true
+        //         x = i
+        //         break
+        //     }
+        // }
+        // if (isThere) {
+        //     list[x].count++
+        // } else {
+        //     setList([...list, {...item, "count":1}])
+        // }
+        dispatch({
+            type:"ADD",
+            payload: item
+        })
         
     }
     return(
